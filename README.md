@@ -13,7 +13,7 @@ Google gives every user 15 GB of free storage for small startups, having that am
      *  C. On the same credentials page, click to manage service accounts.
      *  D. Create a new service account if you don’t already have one.
      *  E. Click to create a new key for this account, select JSON and it should download a JSON credential file for you.
-     *  F. Save the credentials file to the root of your project (or subfolder) and in Visual Studio set the property Copy to Output Path to        “Copy Always”. Note that you shouldn’t make this file publicly available if it’s being used in your solution.
+     *  F. Save the credentials file to the root of your project (or subfolder) and in Visual Studio set the property Copy to Output                Path to “Copy Always”. Note that you shouldn’t make this file publicly available if it’s being used in your solution.
       * G. Copy the service account user’s email address and add give it permission to any folder of your choice. I call that the master              folder. Think of it like the equivalent of a C:\ drive. :-)
       
 # Methods Available:
