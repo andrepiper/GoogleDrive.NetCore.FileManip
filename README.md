@@ -6,6 +6,7 @@ Google Drive files manipulator library (.NET CORE)
 Embed Google Drive in your .NET core application when handling files in your backend applications. 
 Google gives every user 15 GB of free storage for small startups, having that amount of free fast and secure storage is a major win. I wanted to store reports in daily, monthly and yearly folder for team mates to access on the fly from any device that has a Google Drive application installed.
 
+# Getting started
 * Creating a JSON service account file
      *  A. Create a new API project at https://console.developers.google.com/.
      *  B. Go to the Google API credentials page, click to “Create credentials” and select Service account key.
@@ -15,7 +16,7 @@ Google gives every user 15 GB of free storage for small startups, having that am
      *  F. Save the credentials file to the root of your project (or subfolder) and in Visual Studio set the property Copy to Output Path to        “Copy Always”. Note that you shouldn’t make this file publicly available if it’s being used in your solution.
       * G. Copy the service account user’s email address and add give it permission to any folder of your choice. I call that the master              folder. Think of it like the equivalent of a C:\ drive. :-)
       
-Interface Methods Available:
+# Methods Available:
 
 ```
     public interface IGoogleDriveFunctions
@@ -35,7 +36,7 @@ Interface Methods Available:
     
 ```    
 
-See sample usage below, using DI :
+# See sample usage below, using DI :
 
 ```
     class Program
