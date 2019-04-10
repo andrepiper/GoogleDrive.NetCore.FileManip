@@ -1,3 +1,5 @@
+![picture alt](https://st-process-production.s3.amazonaws.com/2178b953-c540-4028-9386-bee9668c79f0/ojcbiLvDFseR9gbL17RJxQ.jpg "Title is optional")
+
 # GoogleDrive.NetCore.FileManip
 Google Drive files manipulator library (.NET CORE)
 
@@ -13,6 +15,26 @@ Google gives every user 15 GB of free storage for small startups, having that am
      *  F. Save the credentials file to the root of your project (or subfolder) and in Visual Studio set the property Copy to Output Path to        “Copy Always”. Note that you shouldn’t make this file publicly available if it’s being used in your solution.
       * G. Copy the service account user’s email address and add give it permission to any folder of your choice. I call that the master              folder. Think of it like the equivalent of a C:\ drive. :-)
       
+Interface Methods Available:
+
+```
+    public interface IGoogleDriveFunctions
+    {
+        Task<File> Copy(string fileId, File body, FilesCopyOptionalParms optional = null);
+        Task<File> Create(File body, FilesCreateOptionalParms optional = null);
+        Task Delete(string fileId, FilesDeleteOptionalParms optional = null);
+        Task EmptyTrash();
+        Task Export(string fileId, string mimeType);
+        Task<GeneratedIds> GenerateId(FilesGenerateIdsOptionalParms optional = null);
+        Task<File> Get(string fileId, FilesGetOptionalParms optional = null);
+        Task<FileList> List(FilesListOptionalParms optional = null);
+        Task<File> Update(string fileId, File body, FilesUpdateOptionalParms optional = null);
+        Task<Channel> Watch(string fileId, Channel body, FilesWatchOptionalParms optional = null);
+        DriveService GetServiceObject();
+    }
+    
+```    
+
 See sample usage below, using DI :
 
 ```
